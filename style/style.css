@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+}
+
+.splash {
+    background-image: url("../img/library.jpg");
+    /*background: #FC466B; 
+    background: -webkit-linear-gradient(to right, #3F5EFB, #FC466B);
+    background: linear-gradient(to right, #3F5EFB, #FC466B);*/
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-attachment: fixed;
+    z-index: 0;
+    flex-direction: column;
+}
+
+.splash h2 {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+
+    padding: 30px;
+    color: white;
+    box-shadow: 0px 0px 0px 3px white;
+    cursor: pointer;
+    z-index: 0;
+    margin: 40px;
+    background-color: rgba(0,0,0,.5);
+    transition: .2s;
+}
+
+.splash p {
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+}
+
+.splash h2:hover {
+    box-shadow: 0px 0px 0px 3px white,
+    0px 0px 0px 9px white,
+    0px 0px 0px 0px white;
+}
+
+.passport {
+    background: #FFBB00;
+    z-index: 2;
+    position: relative;
+    box-shadow: 0px 20px 0px -10px #222;
+}
+
+
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 70px;
+    width: 98%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    margin: 13px 0;
+
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+    /*border-left: 1px solid black;
+    border-right: 1px solid black;*/
+
+    font-size: 20px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+
+    transition: .2s;
+    position: relative;
+
+    cursor: pointer;
+}
+
+nav ul:hover > .whiteblock{
+    width: inherit;
+    height: inherit;
+}
+
+nav .whiteblock {
+    width: 14.28571428%;
+    height: 100%;
+    background-color: white;
+    position: absolute;
+
+    left: 0;
+    transition: .3s ease-in-out;
+    border-radius: 10px;
+}
+
+nav ul h5 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+nav .opennav {
+    display: none;
+}
+
+@media (max-width: 960px) {
+    nav {
+        flex-direction: column;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        left: 0;
+        transform: translateX(-100%);
+        z-index: 15;
+        margin: 0;
+
+        background-color: white;
+
+        transition: .3s;
+    }
+
+    nav .whiteblock {
+        display: none;
+    }
+
+    .navopened {
+        transform: translateX(0);
+    }
+
+    nav ul {
+        width: 200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    nav .opennav {
+        position: absolute;
+        top: 0px;
+        right: -30px;
+        font-size: 25px;
+
+        color: white;
+        display: block;
+        transition: .3s;
+    }
+
+    nav .opennavopened {
+        right: 10px;
+        color: black;
+    }
+}
+
+.page {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 500px;
+    transition: 1s;
+    overflow: hidden;
+    display: flex;
+
+    font-family: 'Heebo', sans-serif;
+    font-weight: 900;
+}
+
+.aboutPage {
+    background-color: #4F681C;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 0px -10px #2d4617;
+}
+
+.musicPage {
+    background-color: #FB6542;
+    font-size: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 0px -10px #d94320;
+}
+
+.contactPage {
+    background-color: #375e97;
+    font-size: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    box-shadow: 0px 20px 0px -10px darkblue;
+}
+
+.newsPage {
+    background-color: #375e97;
+    box-shadow: 0px 20px 0px -10px darkblue;
+    font-size: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.reviewsPage {
+    font-size: 300px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    background-color: #FB6542;
+    box-shadow: 0px 20px 0px -10px #d94320;
+}
+
+.display {
+    width: 85%;
+}

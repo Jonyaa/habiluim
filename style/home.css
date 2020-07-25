@@ -1,0 +1,245 @@
+.homePage { 
+    background: white;
+    flex-direction: row;
+    position: relative;
+ }
+
+.homePage img {
+    width: 150px;
+    height: 150px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+    background-color: gold;
+
+    transition: .3s;
+
+    box-shadow: -1px 1px 1px 1px rgba(0,0,0,.5);
+
+    opacity: 0;
+}
+
+.homePage img:hover {
+    transform: rotateX(20deg) rotateY(20deg) rotateZ(6deg) scale(1.1);
+    box-shadow: -25px 25px 1px -20px rgba(0,0,0,.5);
+}
+
+@keyframes banner {
+    0% {
+        transform: scale(1);
+    }50% {
+        transform: scale(1.1) rotateX(7deg);
+    }100% {
+        transform: scale(1);
+    }
+}
+
+.pass {
+    width: 20%;
+    height: inherit;
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    transition: 1s ease-in-out;
+    background-color: gold;
+}
+
+.pass figure {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    float: left;
+
+    transition: 1s ease-in-out;
+
+    font-family: 'Heebo', sans-serif;
+
+}
+
+.pass figure h2 {
+    font-weight: 900;
+
+}
+.pass figure h3 {
+    font-weight: 300;
+
+}
+
+.pass figcaption {
+    text-align: center;
+    opacity: 0;
+}
+
+.pass .content {
+    opacity: 0;
+    width: 79%;
+    height: 100%;
+    float: right;
+    text-align: right;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    
+    font-size: 20px;
+    letter-spacing: 2px;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 300;
+
+    box-sizing: border-box;
+    padding: 0 80px;
+}
+
+.pass .content h4 {
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    transition: .1s;
+}
+
+.pass .content h4:hover {
+    transform: scale(1.2);
+    transform-origin: center;
+}
+
+.pass1 {
+
+}
+
+.pass2 {
+    left: 20%;
+
+}
+.pass3 {
+    left: 40%;
+}
+
+.pass4 {
+    left: 60%;
+}
+.pass5 {
+    left: 80%;
+}
+
+.pass1 figure {
+    background: #ddd;
+}
+.pass2 figure {
+    background: #aaa;
+
+}
+.pass3 figure {
+    background: #666;
+}
+
+.pass4 figure {
+    background: #aaa;
+}
+.pass5 figure {
+    background: #ddd;
+}
+
+.active {
+    width: 100%;
+    left: 0%;
+}
+
+.active figure {
+    width: 20%;
+}
+
+span#kim img {
+    opacity: 1;
+    display: none;
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: 20%;
+    transform: translateY(-50%);
+}
+
+span#kim img#i1 {
+    left: 20%;
+}
+
+span#kim {
+    color: royalblue;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+span#kim:hover>img {
+    display: block;
+    opacity: 1;
+}
+
+@media (max-width: 960px) {
+    .homePage {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: none;
+
+    }
+    .homePage .pass{
+        width: 100%;
+        height: auto;
+        position: relative;
+        left: 0;
+        top: 0;
+        border-bottom: 2px solid black;
+    }
+
+    .pass figure {
+        background-color: transparent;
+        height: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        
+    }
+
+    .pass .content {
+        opacity: 1;
+        display: block;
+        width: 100%;
+
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-family: 'Heebo', sans-serif;
+        font-weight: 300;
+        text-align: center;
+
+        padding: 10px;
+
+        position: static;
+    }
+
+    .pass .content h4 {
+        display: none;
+    }
+
+    .pass .content p {
+        margin-top: 20px;
+
+    }
+
+    
+}
+

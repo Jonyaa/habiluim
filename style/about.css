@@ -1,0 +1,14 @@
+.aboutPage p {
+    font-size: 15px;
+    text-align: center;
+    font-weight: 500;
+    opacity: 0;
+    letter-spacing: 1px;
+    line-height: 30px;
+
+    width: 60%;
+
+    padding: 30px;
+    border: 10px solid black;
+    background-color: white;
+}
